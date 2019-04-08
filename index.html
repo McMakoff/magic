@@ -7,6 +7,18 @@
 	<title>Магическое</title>
 	<meta name="description" content="описание не длинее 155 символов">
 	<meta name="keywords" content="мета-теги, шаблон, html, css">
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="js/slick.min.js"></script>
+	<script>
+		jQuery.preloadImages = function() {
+		  for(var i = 0; i < arguments.length; i++) {
+		   jQuery("<img>").attr("src", arguments[ i ]);
+		  }
+		 };
+		//указываем путь к изображению, которое нужно подгрузить
+		$.preloadImages('img/owl/sl_1_1.jpg', 'img/owl/sl_1_2.jpg', 'img/owl/sl_1_3.jpg', 'img/owl/sl_1_4.jpg', 'img/owl/sl_1_5.jpg', 'img/owl/sl_1_6.jpg', 'img/owl/sl_1_7.jpg', 'img/owl/sl_1_8.jpg', 'img/owl/sl_r_1.jpg', 'img/owl/sl_r_2.jpg', 'img/owl/sl_r_3.jpg');
+	</script>
 	<link rel="apple-touch-icon" sizes="57x57" href="img/favicons/favicon57.png" data-mce-href="img/favicons/favicon57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="img/favicons/favicon60.png" data-mce-href="img/favicons/favicon60.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="img/favicons/favicon72.png" data-mce-href="img/favicons/favicon72.png">
@@ -63,28 +75,28 @@
 					<div class="col-lg-12">
 						<nav class="main-header__nav">
 							<ul class="nav nav_floating">
-								<li class="nav-item">
+								<li class=nav-item>
 									<a href="#" class="nav-link">обряды</a>
 								</li>
-								<li class="nav-item">
+								<li class=nav-item>
 									<a href="#" class="nav-link">гадание онлайн</a>
 								</li>
-								<li class="nav-item">
+								<li class=nav-item>
 									<a href="#" class="nav-link">сонник</a>
 								</li>
-								<li class="nav-item">
+								<li class=nav-item>
 									<a href="#" class="nav-link">приметы</a>
 								</li>
-								<li class="nav-item">
+								<li class=nav-item>
 									<a href="#" class="nav-link">молитвы</a>
 								</li>
-								<li class="nav-item">
+								<li class=nav-item>
 									<a href="#" class="nav-link">обереги</a>
 								</li>
-								<li class="nav-item">
+								<li class=nav-item>
 									<a href="#" class="nav-link">руны</a>
 								</li>
-								<li class="nav-item">
+								<li class=nav-item>
 									<a href="#" class="nav-link">чакры</a>
 								</li>
 							</ul>
@@ -92,46 +104,46 @@
 								<div class="dropdown-nav dropdown">
 									<button class="dropdown-nav__btn dropdown-toggle" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Раскрывающийся список меню"></button>
 									<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu">
-										<li class="nav-item">
+										<li class=nav-item>
 											<a href="#" class="nav-link">нумерология</a>
 										</li>
-										<li class="nav-item">
+										<li class=nav-item>
 											<a href="#" class="nav-link">астрология</a>
 										</li>
-										<li class="nav-item">
+										<li class=nav-item>
 											<a href="#" class="nav-link">гадание</a>
 										</li>
-										<li class="nav-item">
+										<li class=nav-item>
 											<a href="#" class="nav-link">гадание таро</a>
 										</li>
-										<li class="nav-item">
+										<li class=nav-item>
 											<a href="#" class="nav-link">значение карт таро</a>
 										</li>
-										<li class="nav-item">
+										<li class=nav-item>
 											<a href="#" class="nav-link">медитация</a>
 										</li>
-										<li class="nav-item">
+										<li class=nav-item>
 											<a href="#" class="nav-link">предсказания</a>
 										</li>
-										<li class="nav-item">
+										<li class=nav-item>
 											<a href="#" class="nav-link">саморазвитие</a>
 										</li>
-										<li class="nav-item">
+										<li class=nav-item>
 											<a href="#" class="nav-link">хиромантия</a>
 										</li>
-										<li class="nav-item">
+										<li class=nav-item>
 											<a href="#" class="nav-link">фен-шуй</a>
 										</li>
-										<li class="nav-item">
+										<li class=nav-item>
 											<a href="#" class="nav-link">значение имен</a>
 										</li>
-										<li class="nav-item">
+										<li class=nav-item>
 											<a href="#" class="nav-link">именины</a>
 										</li>
-										<li class="nav-item">
+										<li class=nav-item>
 											<a href="#" class="nav-link">славянская культура</a>
 										</li>
-										<li class="nav-item">
+										<li class=nav-item>
 											<a href="#" class="nav-link">годовшина свадьбы</a>
 										</li>
 									</ul>
@@ -216,6 +228,39 @@
 								</div>
 							</div>
 						</div>
+						<script>
+							$('.population-article__slider').slick({
+							  dots: true,
+							  arrows:false,
+							  infinite: false,
+							  speed: 300,
+							  slidesToShow: 4,
+							  slidesToScroll: 1,
+							  responsive: [
+							    {
+							      breakpoint: 1200,
+							      settings: {
+							        slidesToShow: 3,
+							        slidesToScroll: 1
+							      }
+							    },
+							    {
+							      breakpoint: 900,
+							      settings: {
+							        slidesToShow: 2,
+							        slidesToScroll: 2
+							      }
+							    },
+							    {
+							      breakpoint: 620,
+							      settings: {
+							        slidesToShow: 1,
+							        slidesToScroll: 1
+							      }
+							    }
+							  ]
+							});
+						</script>
 					</div>
 				</div>
 			</div>
@@ -254,6 +299,25 @@
 								</div>
 							</div>
 						</div>
+						<script>
+							$('.population-article__slider_main, .category__slider').slick({
+							  dots: true,
+							  arrows:false,
+							  infinite: false,
+							  speed: 300,
+							  slidesToShow: 2,
+							  slidesToScroll: 1,
+							  responsive: [
+							    {
+							      breakpoint: 620,
+							      settings: {
+							        slidesToShow: 1,
+							        slidesToScroll: 1
+							      }
+							    }
+							  ]
+							});
+						</script>
                     </section>
 					<section class="divination col-xl-6 col-sm-12">
 						<div class="divination__content mx-auto">
@@ -356,6 +420,25 @@
 								</ul>
 							</div>
 						</div>
+						<script>
+								$('.category__slider').slick({
+								  dots: true,
+								  arrows:false,
+								  infinite: false,
+								  speed: 300,
+								  slidesToShow: 2,
+								  slidesToScroll: 1,
+								  responsive: [
+								    {
+								      breakpoint: 620,
+								      settings: {
+								        slidesToShow: 1,
+								        slidesToScroll: 1
+								      }
+								    }
+								  ]
+								});
+							</script>
 					</section>
 				</div>
 
@@ -415,6 +498,39 @@
 								</div>
 							</div>
 						</div>
+						<script>
+							$('.updates__slider').slick({
+							  dots: true,
+							  arrows:false,
+							  infinite: false,
+							  speed: 300,
+							  slidesToShow: 4,
+							  slidesToScroll: 1,
+							  responsive: [
+							    {
+							      breakpoint: 1200,
+							      settings: {
+							        slidesToShow: 3,
+							        slidesToScroll: 1
+							      }
+							    },
+							    {
+							      breakpoint: 900,
+							      settings: {
+							        slidesToShow: 2,
+							        slidesToScroll: 2
+							      }
+							    },
+							    {
+							      breakpoint: 620,
+							      settings: {
+							        slidesToShow: 1,
+							        slidesToScroll: 1
+							      }
+							    }
+							  ]
+							});
+						</script>
 						<a href="#" class="link__yellow">смотреть еще</a>
 					</section>
 				</div>
@@ -490,6 +606,32 @@
 								</div>
 							</div>
 						</div>
+						<script>
+							$('.rating__slider').slick({
+							  dots: true,
+							  arrows:false,
+							  infinite: false,
+							  speed: 300,
+							  slidesToShow: 3,
+							  slidesToScroll: 1,
+							  responsive: [
+							   {
+							      breakpoint: 1100,
+							      settings: {
+							        slidesToShow: 2,
+							        slidesToScroll: 1
+							      }
+							    },
+							    {
+							      breakpoint: 740,
+							      settings: {
+							        slidesToShow: 1,
+							        slidesToScroll: 1
+							      }
+							    }
+							  ]
+							});
+						</script>
 						<div class="rating__link-wrap d-flex align-items-center justify-content-center">
 							<a href="#" class="rating__link-all">полный рейтинг магов</a>
 							<a href="#" class="rating__link-reg">зарегистрироваться в рейтинге</a>
@@ -523,135 +665,56 @@
 				<div class="dropdown-nav dropup">
 					<button class="dropdown-nav__btn dropdown-toggle" id="dropupMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Раскрывающийся список меню"></button>
 					<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropupMenu">
-						<li class="nav-item">
+						<li class=nav-item>
 							<a href="#" class="nav-link">нумерология</a>
 						</li>
-						<li class="nav-item">
+						<li class=nav-item>
 							<a href="#" class="nav-link">астрология</a>
 						</li>
-						<li class="nav-item">
+						<li class=nav-item>
 							<a href="#" class="nav-link">гадание</a>
 						</li>
-						<li class="nav-item">
+						<li class=nav-item>
 							<a href="#" class="nav-link">гадание таро</a>
 						</li>
-						<li class="nav-item">
+						<li class=nav-item>
 							<a href="#" class="nav-link">значение карт таро</a>
 						</li>
-						<li class="nav-item">
+						<li class=nav-item>
 							<a href="#" class="nav-link">медитация</a>
 						</li>
-						<li class="nav-item">
+						<li class=nav-item>
 							<a href="#" class="nav-link">предсказания</a>
 						</li>
-						<li class="nav-item">
+						<li class=nav-item>
 							<a href="#" class="nav-link">саморазвитие</a>
 						</li>
-						<li class="nav-item">
+						<li class=nav-item>
 							<a href="#" class="nav-link">хиромантия</a>
 						</li>
-						<li class="nav-item">
+						<li class=nav-item>
 							<a href="#" class="nav-link">фен-шуй</a>
 						</li>
-						<li class="nav-item">
+						<li class=nav-item>
 							<a href="#" class="nav-link">значение имен</a>
 						</li>
-						<li class="nav-item">
+						<li class=nav-item>
 							<a href="#" class="nav-link">именины</a>
 						</li>
-						<li class="nav-item">
+						<li class=nav-item>
 							<a href="#" class="nav-link">славянская культура</a>
 						</li>
-						<li class="nav-item">
+						<li class=nav-item>
 							<a href="#" class="nav-link">годовшина свадьбы</a>
 						</li>
 					</ul>
 				</div>
 			</div>
-		
+		</nav>
 		</div>
 		<div class="foot-line"></div>
 	</footer>
-	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="js/jquery-migrate-1.2.1.min.js"></script>
-	<script type="text/javascript" src="js/slick.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	<script src="js/scripts.js"></script>
-	<script>
-		$('.population-article__slider, .updates__slider').slick({
-		  dots: true,
-		  arrows:false,
-		  infinite: false,
-		  speed: 300,
-		  slidesToShow: 4,
-		  slidesToScroll: 1,
-		  responsive: [
-		    {
-		      breakpoint: 1200,
-		      settings: {
-		        slidesToShow: 3,
-		        slidesToScroll: 1
-		      }
-		    },
-		    {
-		      breakpoint: 900,
-		      settings: {
-		        slidesToShow: 2,
-		        slidesToScroll: 2
-		      }
-		    },
-		    {
-		      breakpoint: 620,
-		      settings: {
-		        slidesToShow: 1,
-		        slidesToScroll: 1
-		      }
-		    }
-		  ]
-		});
-		$('.population-article__slider_main, .category__slider').slick({
-		  dots: true,
-		  arrows:false,
-		  infinite: false,
-		  speed: 300,
-		  slidesToShow: 2,
-		  slidesToScroll: 1,
-		  responsive: [
-		    {
-		      breakpoint: 620,
-		      settings: {
-		        slidesToShow: 1,
-		        slidesToScroll: 1
-		      }
-		    }
-		  ]
-		});
-
-		$('.rating__slider').slick({
-		  dots: true,
-		  arrows:false,
-		  infinite: false,
-		  speed: 300,
-		  slidesToShow: 3,
-		  slidesToScroll: 1,
-		  responsive: [
-		   {
-		      breakpoint: 1100,
-		      settings: {
-		        slidesToShow: 2,
-		        slidesToScroll: 1
-		      }
-		    },
-		    {
-		      breakpoint: 740,
-		      settings: {
-		        slidesToShow: 1,
-		        slidesToScroll: 1
-		      }
-		    }
-		  ]
-		});
-	</script>
 </body>
 </html>
